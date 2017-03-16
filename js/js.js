@@ -249,4 +249,18 @@ $(function(){
     });
     /*__________DPE GES Hover Effect Ends________*/
 
+    // pagescroll_navbarSize start
+
+    window.onscroll = function() {
+        if (window.pageYOffset > 2){
+             $('.navrow').css({'margin-top':0});
+             $('.navrow').css({'margin-bottom':0});
+        }
+        else {
+            $('.navrow').css({'margin-top':34+'px'});
+             $('.navrow').css({'margin-bottom':34+'px'});
+    }
+    }
+
+    // pagescroll_navbarSize END
 });
