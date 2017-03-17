@@ -57,7 +57,7 @@
             </div><!--form-group-->
          </div> <!--home id-->
                 </div>
-                <div id="collapseTwo" class="accordion-body collapse">
+                <div id="collapseTwo" class="accordion-body collapse-in collapse">
                     <div  class="tab-pane fade in active searchbar">
                         <div class="form-group">
                             <select id="select-box2-filter3" name="typebiens[]" class="form-control " data-placeholder="Date d’annonce" multiple="multiple">
@@ -120,10 +120,9 @@
                         <figure class="listing-item-img-container">
                             <img src="images/listing-img3.jpg" class="img-thumbnail img-border" alt="listing" title="listing" />
                             <figcaption>
-                                <div class="lst-img-caption-btm-btns">
-                                    <h2>PRIX : 599 000 &#8364;</h2>
-                                </div>
-                                
+                                <!--<div class="lst-img-caption-btm-btns">-->
+                                    <!--<h2>PRIX : 599 000 &#8364;</h2>-->
+                                <!--</div>-->
 
                             </figcaption>
                         </figure>
@@ -195,7 +194,7 @@
                     <!-- Listing Item Parameters Start -->
                     <div class="col-md-12 col-sm-12 col-xs-12   text-left">
                     <div class="col-md-7 col-sm-7 col-xs-12 ">
-                         <button type="button" class="buttonCall2"> <i class="glyphicon glyphicon-plus circle2"></i>Plus d’info</button> 
+                         <button type="button" class="buttonCall2"> <i class="glyphicon glyphicon-plus circle2"></i>Plus d’info</button>
                          <a href="#" class="btn staricon btn-link btn-link-m1 btn-xs btn-fav-clr hvr-icon-drop hvr-box-shadow-outset border-circle" title="Ajouter à ma sélection">
                                     <i class="fa fa-star star1 "></i>
                                 </a>
@@ -464,19 +463,15 @@
                     <div class="col-md-12 col-sm-12 col-xs-12" style="overflow: hidden;">
                     <div class="col-md-12 col-sm-12 col-xs-12" style="margin-left:28px;">
                     <hr class="hr-">
-                        <div class="col-md-7 col-sm-7 col-xs-12 text-center">
+                        <div class="col-md-4 col-sm-4 col-xs-10 text-center">
                         <img class="img-responsive logo-listing" src="images/icons/Logo.png">
-                         <p class="agencysudluberon"><b>AGENCE DES AUGUSTINS </b> <br>
-                           <span class="luberonphone">Tél : 04.90.68.02.71</span> </p>
-
                         </div>
                        
-                          <div class="col-md-5 col-sm-5 col-xs-12 ">
-
-
-                      <button type="button" class="buttonCall2 btn2 btn btn-info" data-toggle="modal" data-target="#myModal"> <i class="fa circle fa-phone marg-right5"></i>Contacter l’agence</button>
+                          <div class="col-md-8 col-sm-8 col-xs-12 ">
+                           <p class="agencyAugustin "><b>AGENCE DES AUGUSTINS </b> <br>
+                          <span class="luberonphone">Tél : 04.90.68.02.71</span> </p>
+                          <button type="button" class="buttonCall2 btn2 btn btn-info" data-toggle="modal" data-target="#myModal"> <i class="fa circle fa-phone marg-right5"></i>Contacter l’agence</button>
                         </div>
-               
                         </div>
 
                           </div>
@@ -508,7 +503,6 @@
         </div>
     </section>
     <!-- Pagination Model3 Ends -->
-
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -518,7 +512,7 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <img src="images/modal.png" class=" modalimage img-responsive"  alt="modal" />
-                    <img src="images/log.png" class="modalLog img-responsive"  alt="modal" />
+                    <img src="images/icons/logo.png" class="modalLog img-responsive"  alt="modal" />
                 </div>
 
                 <div class="modal-hover">
@@ -537,7 +531,7 @@
                     <p class="Parce" style="text-align: center!important;">
                         <b> Remplissez ce formulaire si vous souhaitez contacter l'agence.
                             <br>
-                            <span style="color:#882c2f">Les informations obligatoires sont indiquées avec un astérisque (*).</span>
+                            <span style="color:#002994">Les informations obligatoires sont indiquées avec un astérisque (*).</span>
                         </b>
                     </p>
                 </div>
@@ -651,7 +645,8 @@
     </div>
     <!--modal END-->
 
-<!-- jQuery -->
+
+    <!-- jQuery -->
     <script src="js/jquery-3.1.1.min.js"></script>
      <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
