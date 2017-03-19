@@ -26,71 +26,71 @@ $(document).ready(function(){
         return true;
     }
 
-    /* Navigate to Tab Function */
-    var navigateToTab = function(tabEl) {
-        setTimeout(function(){
-            $('.file-input').each(function(index, element) {
-                setFileInputTextElipsis(this);
-            });
-        }, 500);
+    // /* Navigate to Tab Function */
+    // var navigateToTab = function(tabEl) {
+    //     setTimeout(function(){
+    //         $('.file-input').each(function(index, element) {
+    //             setFileInputTextElipsis(this);
+    //         });
+    //     }, 500);
 
-        /*$('#form-wizard').find('li').removeClass('visited-step');*/
+    //     /*$('#form-wizard').find('li').removeClass('visited-step');*/
 
-        /*__________File Input Elipsis Functions Start__________*/
-        var setFileInputTextElipsis=function(cur) {
+    //     /*__________File Input Elipsis Functions Start__________*/
+    //     var setFileInputTextElipsis=function(cur) {
 
-            var filename = $(cur).val().split('\\').pop();
-            if(filename=='')
-                filename=$(cur).attr('data-placeholder');
-            var allowableWidth=$(cur).parent().find(".file-custom").outerWidth()-$(cur).parent().find( ".file-custom-txt" ).outerWidth();
-            $(cur).parent().find( ".file-name-inner" ).text(middleElipsis(filename,allowableWidth));
+    //         var filename = $(cur).val().split('\\').pop();
+    //         if(filename=='')
+    //             filename=$(cur).attr('data-placeholder');
+    //         var allowableWidth=$(cur).parent().find(".file-custom").outerWidth()-$(cur).parent().find( ".file-custom-txt" ).outerWidth();
+    //         $(cur).parent().find( ".file-name-inner" ).text(middleElipsis(filename,allowableWidth));
 
-            $(cur).parent().find( ".file-name").outerWidth($(cur).parent().outerWidth()-$(cur).parent().find( ".file-custom-txt").outerWidth());
-            if($('.file-custom-left').length)
-                $(cur).parent().find( ".file-custom-left" ).css('padding-left',$(cur).parent().find( ".file-custom-txt").outerWidth());
-            if($('.file-custom-right').length)
-                $(cur).parent().find( ".file-custom-right" ).css('padding-right',$(cur).parent().find( ".file-custom-txt").outerWidth());
-        };
+    //         $(cur).parent().find( ".file-name").outerWidth($(cur).parent().outerWidth()-$(cur).parent().find( ".file-custom-txt").outerWidth());
+    //         if($('.file-custom-left').length)
+    //             $(cur).parent().find( ".file-custom-left" ).css('padding-left',$(cur).parent().find( ".file-custom-txt").outerWidth());
+    //         if($('.file-custom-right').length)
+    //             $(cur).parent().find( ".file-custom-right" ).css('padding-right',$(cur).parent().find( ".file-custom-txt").outerWidth());
+    //     };
 
-        $('.file-input').change(function() {
-            setFileInputTextElipsis(this);
-        });
+    //     $('.file-input').change(function() {
+    //         setFileInputTextElipsis(this);
+    //     });
 
-        $(function(){
-            $('.file-input').each(function(index, element) {
-                setFileInputTextElipsis(this);
-            });
-        });
+    //     $(function(){
+    //         $('.file-input').each(function(index, element) {
+    //             setFileInputTextElipsis(this);
+    //         });
+    //     });
 
-        $(window).resize(function(){
-            $('.file-input').each(function(index, element) {
-                setFileInputTextElipsis(this);
-            });
-        });
+    //     $(window).resize(function(){
+    //         $('.file-input').each(function(index, element) {
+    //             setFileInputTextElipsis(this);
+    //         });
+    //     });
 
 
         /*__________File Input Elipsis Functions End__________*/
         /* Validation for Current Tab */
-        var curTabHref=tabEl.find('>a').attr('href');
-        var curTabId=curTabHref.substring(1, curTabHref.length);
-        var curSectionId = tabEl.closest('section').attr('id');
-        if(validateForm(curTabId, curSectionId))
-        {
-            /* Validation for Prevous Tabs */
-            tabEl.prevAll().each(function(){
-                var prevTab=$(this);
-                var prevTabHref=prevTab.find('>a').attr('href');
-                var tabId=prevTabHref.substring(1, prevTabHref.length);
-                prevTab.addClass('visited-step');
-                if(validateForm(tabId, curSectionId))
-                    prevTab.find('>a').html('<i class="fa fa-check"></i>');
-            })
-            tabEl.find('>a').html('<i class="fa fa-check"></i>');
-            tabEl.addClass('visited-step');
-        }
-        else
-            return false;
-    }
+    //     var curTabHref=tabEl.find('>a').attr('href');
+    //     var curTabId=curTabHref.substring(1, curTabHref.length);
+    //     var curSectionId = tabEl.closest('section').attr('id');
+    //     if(validateForm(curTabId, curSectionId))
+    //     {
+    //         /* Validation for Prevous Tabs */
+    //         tabEl.prevAll().each(function(){
+    //             var prevTab=$(this);
+    //             var prevTabHref=prevTab.find('>a').attr('href');
+    //             var tabId=prevTabHref.substring(1, prevTabHref.length);
+    //             prevTab.addClass('visited-step');
+    //             if(validateForm(tabId, curSectionId))
+    //                 prevTab.find('>a').html('<i class="fa fa-check"></i>');
+    //         })
+    //         tabEl.find('>a').html('<i class="fa fa-check"></i>');
+    //         tabEl.addClass('visited-step');
+    //     }
+    //     else
+    //         return false;
+    // }
 
     $(function() {
         if($('#form-wizard').length)
