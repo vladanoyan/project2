@@ -22,7 +22,7 @@
 
 <nav class="navbar navbar-inverse text-Center">
     <div class="container navrow">
-        <img src="images/icons/Logo-(retina).png" class="imgLogo lightSpeedIn" alt="logo">
+        <a href="#" onclick="loadDoc('ACCUEIL.html')"><img src="images/icons/Logo-(retina).png" class="imgLogo lightSpeedIn" alt="logo"></a>
         <div class="navbar-header">
             <button type="button" id="nav-icon3" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                                
@@ -35,21 +35,22 @@
         <div class="collapse navbar-collapse" id="myNavbar">
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="ACCUEIL.html">Accueil</a></li>
-                <li><a href="L'AGENCE.html">L'agence</a></li>
+                <li class="active"><a href="#" onclick="loadDoc('ACCUEIL.html')">Accueil</a></li>
+                <li><a href="#" onclick="loadDoc('LAGENCE.html')">L'agence</a></li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="FICHE_BIEN.html">Nos Biens
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="MENTIONS_LEGALES.html">Nos Biens
                         <span class="glyphicon glyphicon-chevron-down"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="LISTING_BIEN.html">LISTING</a></li>
-                        <li><a href="404.html">LOCATION</a></li>
-                        <li><a href="#">VENTE</a></li>
+                        <li><a href="#" onclick="loadDoc('404.html')">LOCATION</a></li>
+                        <li><a href="#" onclick="loadDoc('ESTIMATION.html')">VENTE</a></li>
+                        <li><a href="#" onclick="loadDoc('MENTIONS_LEGALES.html')">MENTIONS LEGALES</a></li>
                     </ul>
                 </li>
-                <li><a href="RECHERCHE.html"><b>Que recherchez-vous ?</b></a></li>
-                <li><a href="FICHE_BIEN.html">Confiez-nous votre bien</a></li>
-                <li><a href="SIMULATION_DE_PRET.html">Simulation de prêt</a></li>
-                <li><a href="CONTACT.html"  >Contact</a></li>
+                <li><a href="#" onclick="loadDoc('RECHERCHE.html')"><b>Que recherchez-vous ?</b></a></li>
+                <li><a href="#" onclick="loadDoc('FICHE_BIEN.html')">Confiez-nous votre bien</a></li>
+                <li><a href="#" onclick="loadDoc('SIMULATION_DE_PRET.html')">Simulation de prêt</a></li>
+                <li><a href="#"  onclick="loadDoc('CONTACT.html')" >Contact</a></li>
             </ul>
         </div>
     </div>
@@ -352,11 +353,25 @@
 
 
 
+<script>
+
+    function loadDoc(n) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxpage").innerHTML=this.responseText;
+            }
+        };
+        xhttp.open("GET", n, true);
+        xhttp.send();
+    }
+</script>
 
 
 
 
-    <!-- jQuery -->
+
+<!-- jQuery -->
     <script src="js/jquery-3.1.1.min.js"></script>
      <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -382,7 +397,6 @@
     <script src="js/select2.full.min.js"></script>
     <!-- Bootstrap Wizard -->
     <script src="js/jquery.bootstrap.wizard.js"></script>
-
 
 
 </body>

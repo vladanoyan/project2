@@ -419,6 +419,17 @@ margin-bottom: 70px;
     transition: all 0.6s;
     font-family: "Open Sans Light";
     border-radius: 10px;
+    font-size: 30px;
+}
+@media (max-width: 440px) {
+    .picturedNavbar .picturedNavbarItem .title
+    {
+        font-size: 20px;
+    }
+    .picturedNavbar .picturedNavbarItem:hover .title {
+        bottom: 25px !important;
+    }
+
 }
 a:hover, a:focus {
     outline: 0;
@@ -520,7 +531,7 @@ clear: both;
 }
 .ourSecondCarousel .owl-item
 {
-  width: none;
+
     padding: 10px;
 }
 
@@ -694,7 +705,8 @@ body>footer.footer-m2 {
 .footer-m2 .footer-copyright-info {
   padding-left: 1px;
   padding-right: 0px;
-}inline-flex;inline-flex;
+}
+
 .footer-m2 .footer-copyright-logo {
 
   padding-left: 2px;
@@ -871,7 +883,15 @@ margin-bottom: 17px;
   margin-bottom: 45px;
 }
 
+.inform-Augustin {
 
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 57px;
+    margin-bottom: 68px;
+
+}
 
  /*page2 CSS*/
 
@@ -1061,13 +1081,13 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
     margin-top: 8px;
     margin-bottom: 10px;
     border-radius: 27px;
+
 }
 
 .staricon:hover,.staricon:active,.staricon:focus
 {
     background-color: #0133b8;
     color:#fff;
-    border: 1px solid #fff;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6)
 
 }
@@ -1260,12 +1280,7 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
 }
 
 /*--- Listing Item Header ---*/
-.listing-m3 .listing-item-header h2,
-{  margin: 0;
-  padding: 0;
-  text-transform: capitalize;
-  font-size: 1.5em;
-}
+
 
 /*--- Listing Description Block Starts ---*/
 .listing-m3 .listing-hr {
@@ -1374,10 +1389,11 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
 }
 .logo-listing
 {
-  border: 1px solid #dad6d6 ;
-  border-radius: 20px;
-  padding: 3px 9px;
-  display: inline-block;
+    background-color: #fff;
+    border: 1px solid #dad6d6;
+    border-radius: 13px;
+    padding: 3px 9px;
+    display: inline-block;
 
 }
 /*--- Listing Item Contacts ---*/
@@ -1738,9 +1754,9 @@ margin-top: 20px;
 .no-bg{
   background-color: transparent !important;
 }
-.listing-details-m1 .lst-itm-dtl-content[class*='col'] {
-  padding: 0px 0px 4px 0px;
-}
+/*.listing-details-m1 .lst-itm-dtl-content[class*='col'] {*/
+  /*padding: 0px 0px 4px 0px;*/
+/*}*/
 .listing-details-m1 .lst-itm-dtl-btm-block {
   position: relative;
 }
@@ -1886,6 +1902,8 @@ color: #0032b2;
   padding: 10px 0;
   line-height: 22px;
   text-align: justify;
+  color: black;
+  font-family: "Open Sans";
 }
 
 .listing-details-m1 .lst-itm-dtl-desc-header-txt span {
@@ -2073,9 +2091,7 @@ color: #0032b2;
   line-height: 41px;
   vertical-align: middle;
 }
-.listing-details-m1 .lst-itm-dtl-desc p {
-  color: black;
-}
+
 
 .listing-details-m1 .lst-itm-dtl-desc-header-txt span {
   color: inherit;
@@ -2159,8 +2175,7 @@ color: #0032b2;
   /* Listing Details Description */
   .listing-details-m1 .lst-itm-dtl-desc-header-txt span {
     font-size: 1.85em;
-    color: #646464;
-  }
+    color: black;
 }
 
 @media (min-width: 1200px) {
@@ -2178,9 +2193,9 @@ color: #0032b2;
   }
   
   /* Listing Details General */
-  .listing-details-m1 .lst-itm-dtl-content[class*='col'] {
-    padding: 0 0 4px 18px;
-  }
+  /*.listing-details-m1 .lst-itm-dtl-content[class*='col'] {*/
+    /*padding: 0 0 4px 18px;*/
+  /*}*/
   
   /* Listing Details Bottom Block */
   .listing-details-m1 .lst-itm-dtl-btm-block > div:nth-child(2) {
@@ -2316,16 +2331,23 @@ color: #0032b2;
         display: block !important;
     }
     .param>li {
-        width:100%;    }
+        width:100%;
+        text-align: center !important;
+    }
 }
-@media (max-width: 551px){
+@media (max-width: 562px){
     .formgroup
     {
         text-align: center;
         margin:0 auto !important;
     }
 }
-
+@media (min-width: 554px){
+    .myform-control2
+    {
+        float: right !important;
+    }
+}
 @media screen and (max-width:561px) {
 .pagecontacts
 
@@ -2350,6 +2372,7 @@ color: #0032b2;
 .pagecontacts span
 {
   color: #0032b2;
+  font-weight: 700;
 }
 .myform-control2
 {
@@ -2459,7 +2482,7 @@ color: #0032b2;
 .param
 {
 margin: 0;
-padding: 0;
+padding: 19px;
 display: inline-table;
 width: 100%;
 padding-top: 5px;
@@ -2478,8 +2501,28 @@ text-align: -webkit-center;
     }
 }
 
-* ********************** DPE GES Block Model3 Starts ******************************/
+/** ********************** DPE GES Block Model3 Starts ******************************!*/
 /*-------------------------------------------------------------------------------*/
+
+
+/* DPE-GES Block General Colors Start */
+.dpe-ges-block-m3 .dpe-ges-blck-txt {
+    color: #505050;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li span {
+    color: #000;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li.selected span {
+    color: #000;
+    font-weight: bold;
+}
+.dpe-ges-block-m3 .dpe-ges-graph ul li > div:nth-child(1):after {
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 10px solid green;
+    border-left-color: inherit;
+}
+/* DPE-GES Block General Colors End */
 /*-------------------- DPE GES Block Model3 Content Starts --------*/
 .locimg
 {
@@ -2533,9 +2576,9 @@ text-align: -webkit-center;
     margin-bottom: 5px;
 }
 .dpe-ges-block-m3 .dpe-ges-graph ul li {
-    height: 22px;
+    height: 26px;
     padding-right: 0px;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
     position: relative;
     display: block;
     font-size: 11px;
@@ -3309,6 +3352,7 @@ form textarea {
     width: 100%;
     background-color: #fff;
     padding-top: 45px;
+    padding-bottom: 45px;
     min-height: 220px;
     border-bottom-right-radius: 50px;
     border-bottom-left-radius: 50px;
@@ -3446,18 +3490,12 @@ form textarea {
     padding-bottom: 50px;
     padding-top: 50px;
     border-radius: 30px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /*page9 CSS*/
-
-
-.Title_page9 {
-    border:1px solid #002fa8;
-    width: 186px;
-    margin:0 auto;
-    margin-bottom: 40px;
-
-}
 .page9
 {
     margin-bottom: 45px;
