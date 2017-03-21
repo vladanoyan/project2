@@ -684,7 +684,7 @@
                         <div class="title-block title-block-m1-v1 title-lg title-block-clr row-to-table-height marg-top20" >
                             <div class="title-text-block text-center">
                                 <h2 class="header-vente">Contactez l’agence</h2>
-                                <div class="reso">
+                                <div class="reso form-border-rect">
                                     <div class="pagecontacts">
                                     <img class="img-responsive logo-listing" src="images/icons/Logo.png">
                                     <h2>AGENCE DES AUGUSTINS</h2>
@@ -692,18 +692,21 @@
                                     <p>Fax : 04.90.68.01.26</p><br>
                                     <p><span>Plan d’accès </span></p>
                                     </div>
-                                    <div class=" formgroup text-right">
+                                    <div class=" formgroup text-right ">
                                         <select class="form-control myform-control2  selectpicker">
-                                            <option>Civilité</option>
+                                            <option>Ville</option>
                                             <option>Ketchup</option>
                                             <option>Relish</option>
                                         </select>
+                                        <div class="form-error-m1 form-error">
                                         <input class="myform-control2" type="text" name="Nom*" placeholder="Nom*" value="">
                                         <input class="myform-control2" type="text" name="Civilité" placeholder="Civilité" value="">
                                         <input class="myform-control2" type="email" name="E-mail*" placeholder="E-mail*" value="">
+                                        </div>
                                         <label class="sr-only" for="message">Question</label>
                                         <textarea class="form-control2-2" placeholder="Question" id="message"></textarea><br>
-                                        <button class="batserach2 " type="button">Envoyer</button>
+
+                                        <button href="javascript:void(0);" onclick="myform.submit();" class="batserach2 " type="button">Envoyer</button>
                                     </div><!--form-group-->
                                     <!-- Listing Details Top Content Block Ends -->
                                 </div>
@@ -724,7 +727,6 @@
 
 
 </div><!-- container-fluid -->
-
 
 
     <!-- jQuery -->
