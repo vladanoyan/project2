@@ -1,5 +1,5 @@
 
-/*Carousel Head*/
+
 $(document).ready(function(){
  /*__________Tooltip Initialization Starts__________*/
 var startTooltip= function() {
