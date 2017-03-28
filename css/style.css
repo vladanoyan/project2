@@ -4021,7 +4021,7 @@ In this case we don't need it as there are max 4 tabs */
 /*}*/
 /* Cols for Double Input Forms without Addons End */
 /*override*/
-.form-input-group-m1.form-error.form-error-m1 .form-error-blck {
+ .form-error-blck {
     top: 65%;
     transform: translateY(-65%);
     -moz-transform: translateY(-65%);
@@ -4032,6 +4032,10 @@ In this case we don't need it as there are max 4 tabs */
 .form-border-rounded>input
 {
     border-radius: 0;
+}
+.form-error-blck>a
+{
+  color: red;
 }
 /*--------------------  Form Input Group Model1 Content Ends ----------*/
 
@@ -4154,11 +4158,11 @@ In this case we don't need it as there are max 4 tabs */
 .form-error-blck {
     display: none;
 }
-.form-error.form-error-m1 .form-error-blck {
+ .form-error-blck {
     display: inline-block;
     z-index: 170;
     position: absolute;
-    right: -4px;
+    right: -13px;
     top: 50%;
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -4276,18 +4280,18 @@ the drop down is opened above and the form tooltip  is under it */
 
 /*-------------------- Form Error Block Media Queries Start -------*/
 @media (min-width: 480px)  and (max-width: 600px){
-    .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+    .form-error-blck.search-form-error-blck {
         right: 7%;
     }
 }
 @media (min-width: 601px)  and (max-width: 768px){
-    .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+ .form-error-blck.search-form-error-blck {
         right: 8%;
     }
 }
 
 @media (min-width: 992px) {
-    .form-error.form-error-m1 .form-error-blck.search-form-error-blck {
+  .form-error-blck.search-form-error-blck {
         right: -20px;
     }
 }
