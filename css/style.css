@@ -195,7 +195,7 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
   background-color: #f7f7f7;
   border-radius: 0;
   position: fixed;
-  z-index:111;
+  z-index:9999;
   width:100%;
   border:none!important;
     box-shadow:0 0 39px 0 rgba(0, 0, 0, 0.25)
@@ -337,6 +337,7 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
     .navbar-nav {
         float: none!important;
         margin-top: 7.5px;
+        width: 100%;
     }
     .navbar-nav>li {
         float: none;
@@ -473,6 +474,16 @@ a:hover, a:focus {
     margin-bottom: 20px;
 
 }
+@media (max-width: 470px) {
+    .Coups_de_Coeur{
+       font-size: 24px;
+    }
+}
+@media (max-width: 420px) {
+    .Coups_de_Coeur{
+       font-size: 18px;
+    }
+}
 .pics
 {
   position: relative;
@@ -599,13 +610,29 @@ clear: both;
     line-height: 23px;
 }
 
+@media (max-width: 990px) {
+  
+
+  .Parce
+
+  {
+    font-size: 14px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
 
 
 .slider-row
 {
-  padding-left: 80px;
-  padding-right: 80px;
+  padding: 0 40px;
 }
+@media (min-width: 768px) {
+    .slider-row {
+        padding: 0 80px;
+    }
+}
+/
 /*-------------------- Footer Model2 Content Starts -------------------*/
 /*--- Footer General Styles Start ---*/
 body>footer.footer-m2 {
@@ -739,6 +766,7 @@ body>footer.footer-m2 {
 }
 .footer-m2 .footer-top-links-bg {
   background-color: transparent;
+  margin:0;
 }
 .footer-m2 .footer-contacts-partners-bg,
 .footer-m2 .footer-btm-links-bg,
@@ -759,11 +787,11 @@ margin-bottom: 17px;
 .footer-m2 .footer-top-links-clr,
 .footer-m2 .footer-top-links-clr  a {
     width: 100%;
-    text-align: -webkit-center;
     color: #FFF;
     background-image: -moz-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 100%);
     background-image: -webkit-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 100%);
     background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 100%);
+    text-align: center;
 }
 
 /*--- Footer Bottom Links Colors Start ---*/
@@ -1353,7 +1381,6 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
 .circle2
 {
     width: 22px;
-    height: 22px;
     vertical-align: initial;
     margin-right: 8px;
 
@@ -1369,7 +1396,7 @@ background-image: -ms-linear-gradient( 90deg, rgb(0,32,115) 0%, rgb(0,53,191) 10
   height: 33px;
   font-size: 14px;
   font-family: "Open Sans";
-  line-height: 1.714;
+  line-height: 20px;
   border:none;
   margin-top: 8px;
   vertical-align: top;
@@ -1476,7 +1503,12 @@ font-size: 13px;
     margin-right: 12px;
 
 }
-
+@media (max-width: 766px) {
+  .hrp p
+{
+ margin:0; 
+}  
+}
 .listing-m3 .listing-item-parameters {
     vertical-align: top;
     background-color: rgba(205, 205, 205, 0.69);
@@ -1588,6 +1620,17 @@ right: 18px;
         margin-left: 0;
     }
 }
+#agency>.section-bg>.col-sm-12{
+  padding:0;
+  margin:0;
+}
+@media screen and (max-width:400px) {
+   .agency-block-content
+
+    {
+        padding: 0;
+    }
+}
 /*-------------------- Listing Model3 Media Queries End -------------*/
 /********************** Listing Model3 Ends  *****************************************/
 /*-----------------------------------------------------------------------------------*/
@@ -1611,7 +1654,7 @@ right: 18px;
 }
 .locationicon img
 {
-    vertical-align: -webkit-baseline-middle;
+    padding: 4px 4px;
 }
 .locationicon:hover
 {
@@ -1642,7 +1685,7 @@ right: 18px;
   height: 34px;
   width: 37px;
   text-decoration: none;
-  padding: 7px 12px;
+  padding: 7px 10px;
 }
 .pagination>li:first-child,
 .pagination>li:first-child>a,
@@ -1725,6 +1768,20 @@ margin-bottom: 7px;
     font-size: 26px;
     font-family: "Open Sans Light";
     display: inline-block;
+}
+@media (max-width: 420px) {
+   .header-vente>p{
+       font-size: 19px;
+    }
+    #listing-details
+    {
+      padding: 0;
+    }
+    .page6
+    
+    {
+      padding:0;
+    }
 }
 .fa-arrows-alt
 {
@@ -2178,7 +2235,11 @@ color: #0032b2;
     font-size: 1.85em;
     color: black;
 }
-
+@media screen and (max-width:400px) {
+   .listing-details-m1 .lst-itm-dtl-desc-header-txt span {
+    font-size: 22px;
+    }
+}
 @media (min-width: 1200px) {
   /* Listing Details Image Starts */
   .listing-details-m1 .lst-itm-dtl-img .lst-img-caption-top-btns {
@@ -2461,7 +2522,7 @@ color: #0032b2;
     width: 58.33333333%;
 }
 .col-c-xs-6 {
-    width: 50%;
+    width: 49%;
 }
 .col-c-xs-5 {
     width: 41.66666667%;
@@ -2654,6 +2715,58 @@ text-align: -webkit-center;
     top: 0;
 }
 /* Hover Content Li Selected State Ends */
+/*-------------------- DPE GES Block Model1 Version1 Colors End -------------*/
+
+
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress,
+ .dpe-block-cover.no-selected,
+ .dpe-block-cover.inprogress,
+ .ges-block-cover.no-selected,
+ .ges-block-cover.inprogress
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+}
+.dpe-ges-block-m1-v1 div.no-selected {
+    background: url("../images/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 div.inprogress {
+    background: url("../images/no-ges.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 div.no-selected {
+    background: url("../images/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m1-v1 div.inprogress {
+    background: url("../images/ges-inprogress.png") enter rgba(245,245,245, 0.5);
+}
+
+
+
+.dpe-ges-block-m3 .dpe-blck .hover-content div.no-selected {
+    background: url("../images/no-dpe.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .dpe-blck .hover-content div.inprogress {
+    background: url("../images/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.no-selected {
+    background: url("../images/no-ges.png") no-repeat center rgba(245,245,245, 0.5);
+}
+.dpe-ges-block-m3 .ges-blck .hover-content div.inprogress {
+    background: url("../images/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .ges-block .dpe-block-cover div.inprogress {
+    background: url("../images/ges-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
+
+.dpe-ges-block-m1-v2 .dpe-block .dpe-block-cover.inprogress {
+    background: url("../images/dpe-inprogress.png") no-repeat center rgba(245,245,245, 0.5);
+}
 
 /* Visible Content Selected State Starts */
 .dpe-ges-block-m3 .dpe-ges-graph.dpe-ges-graph-selected li{
@@ -2688,6 +2801,7 @@ text-align: -webkit-center;
     z-index: 520;
     /*opacity: 0;*/
     width: 190px;
+    overflow: hidden;
 }
 .dpe-ges-block-m3 .hover-content.pos-obs-right {
     top: 100%;
@@ -3234,6 +3348,15 @@ form .formSectionTitle {
 form .subFormSectionTitle {
     margin-bottom: 40px !important;
 }
+@media (max-width: 470px) {
+    .sectionTitle{
+       font-size: 18px;
+        padding: 6px;
+    }
+    .batserach3{
+      min-width: 50%;
+    }
+}
 .formSectionTitleArea {
     position: absolute;
     top: -15px;
@@ -3481,17 +3604,19 @@ form textarea {
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
+@media (max-width: 420px) {
+#legal-note{
+  padding-right: 0;
+  padding-left: 0;
+}
+}
 /*page9 CSS*/
 .page9
 {
     margin-bottom: 45px;
 }
 
-.error
-{
-    padding: 2px 0;
-}
+
 
 
 /********************** Popup Contact Model2 Starts **********************************/
@@ -3518,6 +3643,10 @@ form textarea {
 .input-border{
     border:none !important;
     border-radius: 0 !important;
+}
+.modal
+{
+  z-index: 99999;
 }
 /* Modal Close Icon */
 .popup-contact-m2 button.modal-close {
@@ -3677,6 +3806,12 @@ form textarea {
     position: absolute;
     bottom: 0;
 }
+@media screen and (min-width:710px) {
+.modal-hover>ul>.col-c-xs-6
+{
+  width: 50%;
+}
+}
 
 .modal-dialog
 {
@@ -3684,6 +3819,12 @@ form textarea {
     width:87%;
     margin: 120px auto;
     background-color: rgba(230, 230, 224, 0.85);
+}
+@media screen and (max-width:350px) {
+    .modal-dialog
+{    width:100% !important;
+
+    }
 }
 .modal-header-lst
 {
@@ -4162,7 +4303,7 @@ In this case we don't need it as there are max 4 tabs */
     display: inline-block;
     z-index: 170;
     position: absolute;
-    right: -13px;
+    right: 18px;
     top: 50%;
     transform: translateY(-50%);
     -moz-transform: translateY(-50%);

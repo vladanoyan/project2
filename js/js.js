@@ -226,7 +226,7 @@ $('#nav-icon3').click(function(){
     });
 /*chenge btn text*/
 
-    	$('#equipment').click(function(){
+    	$('.SeeMore2').click(function(){
     	$('#equipment').toggleClass('flashOn flash')
     });
 
