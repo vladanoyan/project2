@@ -1,6 +1,19 @@
 
 
 $(document).ready(function(){
+
+
+    /** Refresh Modal Window Content */
+    $(document).on('hidden.bs.modal', function (e) {
+        $(e.target).removeData('bs.modal');
+    });
+
+    // modal setTimeout close function
+$(".modal .hvr-shadow-effect2").click(function(){
+    setTimeout(function() {
+        $(".modal").modal('hide');
+    }, 3000);
+});
  /*__________Tooltip Initialization Starts__________*/
 var startTooltip= function() {
     var hideAllTooltips = function() {
@@ -40,6 +53,13 @@ $(document).ajaxComplete(function() {
     startTooltip();
 });
 /*__________Tooltip Initialization Ends__________*/
+
+
+/*__________file UPload text change start__________*/
+
+!function(a,b,c){var d=a.querySelectorAll(".fileUpload");Array.prototype.forEach.call(d,function(a){var b=a.nextElementSibling,c=b.innerHTML;a.addEventListener("change",function(a){var d="";d=this.files&&this.files.length>1?(this.getAttribute("data-multiple-caption")||"").replace("{count}",this.files.length):a.target.value.split("\\").pop(),d?b.querySelector("span").innerHTML=d:b.innerHTML=c}),a.addEventListener("focus",function(){a.classList.add("has-focus")}),a.addEventListener("blur",function(){a.classList.remove("has-focus")})})}(document,window,0);
+/*__________file UPload text change end__________*/
+
 
 
 /*_________Changing Toggle Button Active State Starts__________*/
@@ -226,8 +246,11 @@ $('#nav-icon3').click(function(){
     });
 /*chenge btn text*/
 
-    	$('.SeeMore2').click(function(){
-    	$('#equipment').toggleClass('flashOn flash')
+    $("#show").hide();
+    $(".SeeMore2").click(function(){
+        $("#hide").toggle();
+        $("#show").toggle();
+
     });
 
    /*__________Listing Model3 Functions Start_________*/
