@@ -2458,6 +2458,7 @@
     .listing-item-price-color{
       font-size: 15px;
       display: inline-block!important;
+      color:#0132b3; 
 
     }
     @media (max-width: 1200px) {
