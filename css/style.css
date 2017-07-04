@@ -152,7 +152,7 @@
     font-family:  'Open Sans', sans-serif;
     font-weight: 400;
     color: black;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     padding-top: 3px;
     padding-bottom: 3px;
@@ -188,7 +188,8 @@
     {
     padding:0 0;
     border-radius: 10px;
-    overflow: hidden;
+     max-height: 300px;
+    overflow-y: auto;
     }
     .navbar-inverse
     {
@@ -230,7 +231,7 @@
     }
     .imgLogo
     {
-    max-width: 27% !important;
+    max-width: 30% !important;
     float: left;
     }
 
@@ -415,6 +416,9 @@
     font-family: "Open Sans Light";
     border-radius: 10px;
     font-size: 30px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%,-50%);
     }
     @media (max-width: 440px) {
     .picturedNavbar .picturedNavbarItem .title
@@ -435,10 +439,7 @@
     padding: 0 5px;
     }
     .picturedNavbar .picturedNavbarItem>a{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+   
     }
     @media (max-width: 768px) {
     .picturedNavbar .firstItem {
@@ -1856,7 +1857,9 @@
     /*GPE -GES*/
     .locationicon
     {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 35px;
     height: 35px;
     background-color: #969696;
@@ -3225,6 +3228,7 @@ background: url("../images/no-ges.png")no-repeat center rgba(245,245,245, 0.5);
     box-shadow: none;
     left:0;
     padding: 17px;
+    width: 100%;
     }
 
     }

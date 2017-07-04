@@ -493,6 +493,117 @@
     <script src="js/select2.full.min.js"></script>
     <!-- Bootstrap Wizard -->
     <script src="js/jquery.bootstrap.wizard.js"></script>
+<script type="text/javascript">
 
+    /**
+     * This function select2 repo. Write data after ajax call
+     * @param repo
+     * @returns {*}
+     */
+    function formatRepo (repo) {
+
+        if (repo.loading) return repo.text;
+
+        var markup = '<div class="clearfix">' +
+            '<div class="col-sm-12">' + repo.show_name + '</div>' +
+            '</div>';
+        return markup;
+    }
+
+    /**
+     *
+     * @param repo
+     * @returns {string|*}
+     */
+    function formatRepoSelection (repo) {
+
+        var selected ;
+        // if not found repo get data from post
+        if(!repo.id ) {
+            repo.id = "<?= $localité ? $localité : 0 ?>";
+            repo.secteur_nom = "<?= $secteurNom ? $secteurNom : '' ?>";
+            repo.secteur_insee = "<?= $secteurInsee ? $secteurInsee : '' ?>";
+            repo.show_name = "<?= $showName ? $showName : $localitéLabel ?>";
+            selected = repo.show_name ;
+        }
+        else {
+            // if not found repo get data from post
+            $('input[name="Departement"]').val(repo.dep_nom);
+            $('input[name="Secteur"]').val(repo.secteur_depcode);
+            $('input[name="fiche_cp"]').val(repo.secteur_nom);
+            $('input[name="fiche_villereal"]').val(repo.secteur_insee);
+            $('input[name="secteur_nom"]').val(repo.secteur_nom);
+            $('input[name="secteur_insee"]').val(repo.secteur_insee);
+            $('input[name="show_name"]').val(repo.show_name);
+            selected = repo.show_name ;
+        }
+        // Write data in select
+        return selected || repo.text;
+    }
+
+    // This function get villes use select2
+    function getLocation()
+    {
+        /**
+         * get se4lect2
+         * @type {*|jQuery|HTMLElement}
+         */
+        var location = $("#location");
+
+        // check specific functions for this design
+        location.select2().on("select2:open", function() {
+            // TODO created bug after new version select2 fixed
+        });
+        // get data for select use ajax
+        location.select2({
+            minimumResultsForSearch: -1,
+            allowClear: false,
+            closeOnSelect: true,
+            ajax: {
+                url: "get_villes_Ajax.php",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                // calculate result
+                processResults: function (data, page) {
+                    $('.select2-results').show();
+                    var results = [];
+                    if(data.total_count > 0){
+                        t = data.items;
+                        return {
+                            results: data.items
+                        };
+                    } else {
+                        $('.select2-results__message').show();
+                        $('.select2-results > .select2-results__options').html('<li role="treeitem" aria-live="assertive" class="select2-results__option select2-results__message">Aucun résultat trouvé</li>')
+
+                        results[0]['id']= null;
+                        return results;
+                    }
+                },
+                cache: true
+            },
+            width: '100%',
+            containerCssClass: "select2-sel-v2-container",
+            language: {
+                searching: function() {
+                    return "Recherche...";
+                }
+            },
+            escapeMarkup: function (markup) { return markup; }, // let our custom formatter work
+            minimumInputLength: 2,
+            templateResult: formatRepo, // omitted for brevity, see the source of this page
+            templateSelection: formatRepoSelection, // omitted for brevity, see the source of this page
+        });
+    }
+
+    getLocation();
+    // hide selection clear
+</script>
 </body>
 </html>
